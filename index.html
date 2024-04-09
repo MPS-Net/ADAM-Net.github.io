@@ -196,16 +196,16 @@
         <p class="paragraph-3 nerf_text long-text">Generating realistic 3D human motion has been a fundamental goal of the 
           game/animation industry. This work presents a novel transition generation technique that can bridge the actions 
           of people in the foreground by generating 3D poses and shapes in between photos, allowing 3D animators/novice users 
-          to easily create/edit 3D motions. To achieve this, we propose an adaptive motion network (AdMoNet) that effectively 
+          to easily create/edit 3D motions. To achieve this, we propose an adaptive motion network (ADAM-Net) that effectively 
           learns human motion from masked action sequences to generate kinematically compliant 3D poses and shapes in-between 
-          given temporally-sparse photos. Three core learning designs underpin AdMoNet. First, we introduce a random masking 
+          given temporally-sparse photos. Three core learning designs underpin ADAM-Net. First, we introduce a random masking 
           process that randomly masks images from an action sequence and fills masked regions in latent space by interpolation 
           of unmasked images to simulate various transitions under given temporally-sparse photos. Second, we propose a 
-          long-range adaptive motion (L-AdMo)attention module that leverages visual cues observed from human motion to 
+          long-range adaptive motion (L-ADAM)attention module that leverages visual cues observed from human motion to 
           adaptively recalibrate the range that needs attention in a sequence, along with a multi-head cross-attention. 
-          Third, we develop a short-range adaptive motion (S-AdMo) attention module that weightedly selects and integrates 
+          Third, we develop a short-range adaptive motion (S-ADAM) attention module that weightedly selects and integrates 
           adjacent feature representations at different levels to strengthen temporal correlation. By coupling these designs, 
-          the results demonstrate that AdMoNet excels not only in generating 3D poses and shapes in-between photos, but also 
+          the results demonstrate that ADAM-Net excels not only in generating 3D poses and shapes in-between photos, but also 
           in classic 3D human pose and shape estimation. </p>
       </div>
     </div>
@@ -237,7 +237,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig6.png">     
               <source src="./Fig6.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of baseline method (a), TCMR (b), and our AdMoNet (c) on the challenging in-the-wild 3DPW dataset. The first and last photos in the sequence are given keyframes, which correspond to photos with bright backgrounds and red windows. The photos in-between keyframes are the original image references (i.e., dark background photos). The transition length is set to 5 in this experiment. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions. (Corresponding to Fig. 6 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of baseline method (a), TCMR (b), and our ADAM-Net (c) on the challenging in-the-wild 3DPW dataset. The first and last photos in the sequence are given keyframes, which correspond to photos with bright backgrounds and red windows. The photos in-between keyframes are the original image references (i.e., dark background photos). The transition length is set to 5 in this experiment. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions. (Corresponding to Fig. 6 in our paper)
           </h1>
           </div>
         </div>
@@ -252,7 +252,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig7.png">     
               <source src="./Fig7.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of TCMR (a) and our AdMoNet (b) on the challenging in-the-wild MPI-INF-3DHP dataset, where the transition length is set to 20. Due to the extended length of the generated motion transition (longer transition length setting), we have adopted an equal interval sampling method for the 20 generated 3D poses and shapes to provide a clearer presentation of the results. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions preserved after sampling. (Corresponding to Fig. 7 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of TCMR (a) and our ADAM-Net (b) on the challenging in-the-wild MPI-INF-3DHP dataset, where the transition length is set to 20. Due to the extended length of the generated motion transition (longer transition length setting), we have adopted an equal interval sampling method for the 20 generated 3D poses and shapes to provide a clearer presentation of the results. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions preserved after sampling. (Corresponding to Fig. 7 in our paper)
             </h1>
           </div>
         </div>
@@ -268,7 +268,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig8.png">     
               <source src="./Fig8.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of baseline method (a), TCMR (b), MPS-Net (c), and our AdMoNet (d) on photos downloaded from the Internet, where the transition length is set to 31. The results are presented by sampling 31 generated 3D poses and shapes at equal intervals for better viewing. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions preserved after sampling. (Corresponding to Fig. 8 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of baseline method (a), TCMR (b), MPS-Net (c), and our ADAM-Net (d) on photos downloaded from the Internet, where the transition length is set to 31. The results are presented by sampling 31 generated 3D poses and shapes at equal intervals for better viewing. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions preserved after sampling. (Corresponding to Fig. 8 in our paper)
             </h1>
           </div>
         </div>
@@ -284,7 +284,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig9.png">     
               <source src="./Fig9.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison among our AdMoNet, AdMoNet-only MHA [21], and a linear interpolation method where the 3D human meshes for the start and end keyframes of the linear interpolation method are taken from AdMoNet. The results are presented by sampling 31 generated 3D poses and shapes at equal intervals, and unfolded for better viewing. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions preserved after sampling. (Corresponding to Fig. 9 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison among our ADAM-Net, ADAM-Net-only MHA [21], and a linear interpolation method where the 3D human meshes for the start and end keyframes of the linear interpolation method are taken from ADAM-Net. The results are presented by sampling 31 generated 3D poses and shapes at equal intervals, and unfolded for better viewing. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions preserved after sampling. (Corresponding to Fig. 9 in our paper)
             </h1>
           </div>
         </div>
@@ -297,7 +297,7 @@
     <div data-anchor="slide1" class="section nerf_section">
       <div class="w-container">
         <h2 class="white_section_nerf">Qualitative Evaluation</h2>
-        <h1 class="nerf_affiliation_v2" style="font-size: 24px;text-align: left;">- Visual effects of our <font color="red">AdMoNet</font> under different transition lengths, inserting/replacing different photos.</h1>
+        <h1 class="nerf_affiliation_v2" style="font-size: 24px;text-align: left;">- Visual effects of our <font color="red">ADAM-Net</font> under different transition lengths, inserting/replacing different photos.</h1>
       </div>
     </div>
     
@@ -308,7 +308,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig11.png">     
               <source src="./Fig11.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative results of 3D pose and shape transitions generated by AdMoNet under arbitrarily edited input photos and transition lengths. As compared to (a), (b) inserts one more photo (keyframe), as compared to (b), (c) replaces one of the photos in (b), and as compared to (c), (d) changes the photo positions in (c), which also has a different transition length. The results on the right are presented by sampling the generated 3D poses and shapes at equal intervals for better viewing. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions preserved after sampling. (Corresponding to Fig. 11 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative results of 3D pose and shape transitions generated by ADAM-Net under arbitrarily edited input photos and transition lengths. As compared to (a), (b) inserts one more photo (keyframe), as compared to (b), (c) replaces one of the photos in (b), and as compared to (c), (d) changes the photo positions in (c), which also has a different transition length. The results on the right are presented by sampling the generated 3D poses and shapes at equal intervals for better viewing. Bright colors represent the generated 3D human pose and shape of given photos, while dark colors represent the generated transitions preserved after sampling. (Corresponding to Fig. 11 in our paper)
             </h1>
           </div>
         </div>
@@ -323,7 +323,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig13.png">     
               <source src="./Fig13.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative results of animating 3D pose transitions (generated by our AdMoNet) into avatars. Photos (keyframes) are downloaded from the Internet and edited arbitrarily by the author. The transition length in-between keyframes is set to 10. From top to bottom, each example displays the given keyframes, the unfolded generated 3D pose and shape transitions, and the animated character. (Corresponding to Fig. 13 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative results of animating 3D pose transitions (generated by our ADAM-Net) into avatars. Photos (keyframes) are downloaded from the Internet and edited arbitrarily by the author. The transition length in-between keyframes is set to 10. From top to bottom, each example displays the given keyframes, the unfolded generated 3D pose and shape transitions, and the animated character. (Corresponding to Fig. 13 in our paper)
             </h1>
           </div>
         </div>
@@ -347,7 +347,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig15.png">     
               <source src="./Fig15.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of RMIB [7] with pose estimator [2], RMIB [7] with pose estimator AdMoNet, and our AdMoNet on the challenging in-the-wild 3DPW dataset. The red and blue skeletons respectively represent the starting and ending keyframes, while the pink signifies the generated transition of the 3D joints. (Corresponding to Fig. 15 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of RMIB [7] with pose estimator [2], RMIB [7] with pose estimator ADAM-Net, and our ADAM-Net on the challenging in-the-wild 3DPW dataset. The red and blue skeletons respectively represent the starting and ending keyframes, while the pink signifies the generated transition of the 3D joints. (Corresponding to Fig. 15 in our paper)
             </h1>
           </div>
         </div>
@@ -363,7 +363,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig16.png">     
               <source src="./Fig16.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of RMIB [7] with pose estimator [56], and our AdMoNet on the challenging EMDB dataset. The red and blue skeletons respectively represent the starting and ending keyframes, while the pink signifies the generated transition of the 3D joints. (Corresponding to Fig. 16 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of RMIB [7] with pose estimator [56], and our ADAM-Net on the challenging EMDB dataset. The red and blue skeletons respectively represent the starting and ending keyframes, while the pink signifies the generated transition of the 3D joints. (Corresponding to Fig. 16 in our paper)
             </h1>
           </div>
         </div>
@@ -387,7 +387,7 @@
             <video class="results" loop="" playsinline="" controls="" width="100%" poster="./Fig17.png">     
               <source src="./Fig17.mp4" type="video/mp4">
             </video>
-            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of TCMR (left), MPS-Net (middle), and our AdMoNet (right) for pose and shape estimation on the challenging in-the-wild 3DPW dataset and video downloaded from the Internet. (Corresponding to Fig. 17 in our paper)
+            <h1 class="nerf_affiliation_v3" style="margin-right: 40px;font-size: 18px">Qualitative comparison of TCMR (left), MPS-Net (middle), and our ADAM-Net (right) for pose and shape estimation on the challenging in-the-wild 3DPW dataset and video downloaded from the Internet. (Corresponding to Fig. 17 in our paper)
             </h1>
           </div>
         </div>
